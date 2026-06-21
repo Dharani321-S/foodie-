@@ -1,0 +1,601 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fff;
+    overflow-x:hidden;
+}
+
+/* ===== Hero wrapper (orange background) ===== */
+
+.hero-section{
+    background:#ff5200;
+    padding-bottom:60px;
+}
+
+/* Navbar */
+
+.main{
+    display:flex;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+}
+
+ul{
+    list-style:none;
+    margin-left:auto;
+}
+
+li{
+    display:inline-block;
+    color:white;
+    margin-left:30px;
+}
+
+button{
+    padding:10px 15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.signin{
+    background:black;
+    color:white;
+}
+
+#getAppBtn{
+    background:white;
+    color:#ff5200;
+    font-weight:700;
+}
+
+/* Heading */
+
+.heading{
+    color:white;
+    text-align:center;
+    font-size:60px;
+    max-width:900px;
+    margin:70px auto 0;
+    padding:0 20px;
+}
+
+/* Search */
+
+.search-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:40px 0 50px;
+    flex-wrap:wrap;
+    padding:0 20px;
+}
+
+.location,
+.search{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.location{
+    width:300px;
+}
+
+.search{
+    width:500px;
+}
+
+.location input,
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:18px;
+}
+
+.fa-location-dot{
+    color:#ff5200;
+    font-size:24px;
+}
+
+.fa-magnifying-glass{
+    cursor:pointer;
+    color:#ff5200;
+}
+
+/* Cards */
+
+.boxmenu{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:0 20px;
+}
+
+.food,
+.app,
+.out{
+    background:white;
+    width:300px;
+    height:260px;
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+}
+
+.card-bg-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.card-overlay{
+    position:absolute;
+    inset:0;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    background:linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.65) 75%);
+}
+
+.card-overlay h2,
+.card-overlay p{
+    color:white;
+}
+
+.card-overlay p{
+    color:#eee;
+}
+
+.offer-badge{
+    color:#ff5200;
+    display:inline-block;
+    border-radius:10px;
+    background-color:antiquewhite;
+    margin-top:10px;
+    padding:10px;
+    align-self:flex-start;
+}
+
+.card-footer{
+    margin-top:auto;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.card-arrow{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#ff5200;
+    color:white;
+    font-size:16px;
+}
+
+/* ===== Horizontal scroll rows (food options / groceries) ===== */
+
+.food-options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    margin-top:50px;
+}
+
+.food-options h2{
+    font-size:24px;
+}
+
+.scroll-arrows{
+    display:flex;
+    gap:10px;
+}
+
+.arrow-btn{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#f0f0f0;
+    border:none;
+    cursor:pointer;
+}
+
+.food-scroll{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding:30px 40px;
+    scrollbar-width:none;
+}
+
+.food-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.food-item{
+    flex:0 0 auto;
+    width:160px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.food-item-img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:#fff3e9;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom:10px;
+    transition:transform 0.2s ease;
+}
+
+.food-item:hover .food-item-img{
+    transform:scale(1.05);
+}
+
+.food-item-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* ===== Dineout cards ===== */
+
+.dineout-scroll{
+    display:flex;
+    gap:24px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding:30px 40px;
+    scrollbar-width:none;
+}
+
+.dineout-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.dineout-card{
+    flex:0 0 auto;
+    width:320px;
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.dineout-img{
+    height:160px;
+    position:relative;
+    color:white;
+}
+
+.dineout-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.dineout-rating{
+    position:absolute;
+    bottom:14px;
+    right:14px;
+    background:#0f8a4f;
+    padding:4px 10px;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.dineout-card h3{
+    padding:12px 14px 0;
+    font-size:17px;
+}
+
+.dineout-meta,
+.dineout-loc{
+    padding:4px 14px;
+    font-size:13px;
+    color:gray;
+}
+
+.dineout-offer{
+    display:block;
+    width:calc(100% - 28px);
+    margin:10px 14px 16px;
+    background:#0f8a4f;
+    color:white;
+    padding:8px 10px;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:600;
+    text-align:left;
+}
+
+.dineout-offer:hover{
+    background:#0c7141;
+}
+
+/* ===== App banner ===== */
+
+.app-banner{
+    background:#1c1c25;
+    color:white;
+    border-radius:16px;
+    margin:50px 40px;
+    padding:40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.app-banner h2{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.app-banner p{
+    color:#aaa;
+    margin-bottom:16px;
+}
+
+.app-banner-btn{
+    background:#ff5200;
+    color:white;
+    font-weight:700;
+}
+
+.app-banner-img{
+    width:120px;
+    height:120px;
+    border-radius:16px;
+    object-fit:cover;
+}
+
+/* ===== Cities ===== */
+
+.cities-section{
+    padding:0 40px 50px;
+}
+
+.cities-section h2{
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.cities-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.city-pill{
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:16px;
+    text-align:center;
+    font-weight:600;
+    cursor:pointer;
+    transition:background 0.15s ease, border-color 0.15s ease;
+}
+
+.city-pill:hover{
+    background:#fff3e9;
+    border-color:#ff5200;
+}
+
+/* ===== Footer ===== */
+
+.site-footer{
+    background:#f4f4f4;
+    padding:40px;
+}
+
+.footer-logo{
+    color:#ff5200;
+}
+
+.footer-top{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.site-footer a{
+    display:block;
+    color:#444;
+    text-decoration:none;
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+.site-footer h4{
+    margin-bottom:14px;
+}
+
+/* ===== Toast ===== */
+
+.toast{
+    position:fixed;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%) translateY(20px);
+    background:#1c1c25;
+    color:white;
+    padding:14px 24px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 0.25s ease, transform 0.25s ease;
+    z-index:1100;
+    max-width:90%;
+    text-align:center;
+}
+
+.toast.show{
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
+}
+
+/* ===== Sign In / App Modal ===== */
+
+.modal-overlay{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.5);
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+}
+
+.modal-overlay.active{
+    display:flex;
+}
+
+.modal-box{
+    background:white;
+    width:380px;
+    max-width:90%;
+    border-radius:16px;
+    padding:36px 30px;
+    position:relative;
+    text-align:center;
+}
+
+.modal-close{
+    position:absolute;
+    top:14px;
+    right:18px;
+    font-size:22px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    color:#888;
+    padding:0;
+    border-radius:0;
+}
+
+.modal-logo{
+    color:#ff5200;
+    margin-bottom:6px;
+}
+
+.modal-sub{
+    color:gray;
+    font-size:13px;
+    margin-bottom:24px;
+}
+
+.modal-label{
+    display:block;
+    text-align:left;
+    font-size:13px;
+    color:#444;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.modal-input-group{
+    display:flex;
+    align-items:center;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:12px 14px;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.modal-prefix{
+    font-weight:600;
+    color:#333;
+    border-right:1px solid #ddd;
+    padding-right:10px;
+}
+
+.modal-input-group input{
+    border:none;
+    outline:none;
+    font-size:16px;
+    width:100%;
+}
+
+.modal-continue{
+    width:100%;
+    background:#ff5200;
+    color:white;
+    padding:14px;
+    border-radius:8px;
+    font-weight:700;
+    font-size:15px;
+    margin-bottom:16px;
+}
+
+.modal-terms{
+    font-size:12px;
+    color:gray;
+}
+
+.modal-terms a{
+    color:#ff5200;
+    text-decoration:none;
+}
+
+.qr-box{
+    width:160px;
+    height:160px;
+    margin:0 auto 20px;
+    background:#f4f4f4;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:70px;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width:880px){
+    .heading{
+        font-size:36px;
+    }
+    .boxmenu{
+        flex-direction:column;
+        align-items:center;
+    }
+    .cities-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .app-banner{
+        flex-direction:column;
+        text-align:center;
+    }
+}

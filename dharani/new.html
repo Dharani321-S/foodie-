@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node.js">
+    <title>Swiggy Clone</title>
+</head>
+<body>
+<div class="hero-section">
+
+    <div class="main">
+        <h1 class="logo">🛵 Swiggy</h1>
+        <ul>
+            <li>Swiggy Corporate</li>
+            <li>Partner With Us</li>
+            <li><button id="getAppBtn">Get the App</button></li>
+            <li><button class="signin" id="signInBtn">Sign In</button></li>
+        </ul>
+    </div>
+
+    <h1 class="heading">
+        Order food & groceries. Discover best restaurants. Swiggy it!
+    </h1>
+
+    <div class="search-container">
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Enter your delivery location" id="locationInput">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search for restaurant, item or more" id="searchInput">
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+        </div>
+    </div>
+
+    <div class="boxmenu">
+        <div class="food">
+            <img class="card-bg-img" src="https://picsum.photos/seed/swiggyfood/400/300" alt="Food delivery">
+            <div class="card-overlay">
+                <h2>FOOD DELIVERY</h2>
+                <p>FROM RESTAURANTS</p>
+                <button class="offer-badge" data-message="🎉 Get UPTO 60% OFF on your Food Delivery order!">UPTO 60% OFF</button>
+                <div class="card-footer">
+                    <button class="card-arrow" data-scroll="foodScroll"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="app">
+            <img class="card-bg-img" src="https://picsum.photos/seed/swiggyinstamart/400/300" alt="Instamart">
+            <div class="card-overlay">
+                <h2>INSTAMART</h2>
+                <p>INSTANT GROCERY</p>
+                <button class="offer-badge" data-message="🛒 Get UPTO 60% OFF on Instamart groceries!">UPTO 60% OFF</button>
+                <div class="card-footer">
+                    <button class="card-arrow" data-scroll="groceryScroll"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="out">
+            <img class="card-bg-img" src="https://picsum.photos/seed/swiggydineout/400/300" alt="Dineout">
+            <div class="card-overlay">
+                <h2>DINEOUT</h2>
+                <p>EAT OUT & SAVE MORE</p>
+                <button class="offer-badge" data-message="🍽️ Get UPTO 50% OFF when you Dineout!">UPTO 50% OFF</button>
+                <div class="card-footer">
+                    <button class="card-arrow" data-scroll="dineoutScroll"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ===== Order our best food options ===== -->
+<div class="food-options">
+    <h2>Order our best food options</h2>
+    <div class="scroll-arrows">
+        <button class="arrow-btn" id="foodPrev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="arrow-btn" id="foodNext"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</div>
+<div class="food-scroll" id="foodScroll">
+    <div class="food-item" data-name="North Indian"><div class="food-item-img"><img src="https://picsum.photos/seed/northindian/200/200" alt="North Indian"></div><p>North Indian</p></div>
+    <div class="food-item" data-name="Desserts"><div class="food-item-img"><img src="https://picsum.photos/seed/desserts/200/200" alt="Desserts"></div><p>Desserts</p></div>
+    <div class="food-item" data-name="Chinese"><div class="food-item-img"><img src="https://picsum.photos/seed/chinese/200/200" alt="Chinese"></div><p>Chinese</p></div>
+    <div class="food-item" data-name="Cake"><div class="food-item-img"><img src="https://picsum.photos/seed/cake/200/200" alt="Cake"></div><p>Cake</p></div>
+    <div class="food-item" data-name="Burger"><div class="food-item-img"><img src="https://picsum.photos/seed/burger/200/200" alt="Burger"></div><p>Burger</p></div>
+    <div class="food-item" data-name="Pasta"><div class="food-item-img"><img src="https://picsum.photos/seed/pasta/200/200" alt="Pasta"></div><p>Pasta</p></div>
+    <div class="food-item" data-name="Salad"><div class="food-item-img"><img src="https://picsum.photos/seed/salad/200/200" alt="Salad"></div><p>Salad</p></div>
+    <div class="food-item" data-name="Paratha"><div class="food-item-img"><img src="https://picsum.photos/seed/paratha/200/200" alt="Paratha"></div><p>Paratha</p></div>
+</div>
+
+<!-- ===== Shop groceries on Instamart ===== -->
+<div class="food-options">
+    <h2>Shop groceries on Instamart</h2>
+    <div class="scroll-arrows">
+        <button class="arrow-btn" id="groceryPrev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="arrow-btn" id="groceryNext"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</div>
+<div class="food-scroll" id="groceryScroll">
+    <div class="food-item" data-name="Fresh Vegetables"><div class="food-item-img"><img src="https://picsum.photos/seed/vegetables/200/200" alt="Fresh Vegetables"></div><p>Fresh Vegetables</p></div>
+    <div class="food-item" data-name="Fresh Fruits"><div class="food-item-img"><img src="https://picsum.photos/seed/fruits/200/200" alt="Fresh Fruits"></div><p>Fresh Fruits</p></div>
+    <div class="food-item" data-name="Dairy, Bread and Eggs"><div class="food-item-img"><img src="https://picsum.photos/seed/dairybread/200/200" alt="Dairy, Bread and Eggs"></div><p>Dairy, Bread and Eggs</p></div>
+    <div class="food-item" data-name="Rice, Atta and Dals"><div class="food-item-img"><img src="https://picsum.photos/seed/riceatta/200/200" alt="Rice, Atta and Dals"></div><p>Rice, Atta and Dals</p></div>
+    <div class="food-item" data-name="Masalas and Dry Fruits"><div class="food-item-img"><img src="https://picsum.photos/seed/masala/200/200" alt="Masalas and Dry Fruits"></div><p>Masalas and Dry Fruits</p></div>
+    <div class="food-item" data-name="Oils and Ghee"><div class="food-item-img"><img src="https://picsum.photos/seed/oilsghee/200/200" alt="Oils and Ghee"></div><p>Oils and Ghee</p></div>
+</div>
+
+<!-- ===== Discover best restaurants on Dineout ===== -->
+<div class="food-options">
+    <h2>Discover best restaurants on Dineout</h2>
+    <div class="scroll-arrows">
+        <button class="arrow-btn" id="dineoutPrev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="arrow-btn" id="dineoutNext"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</div>
+<div class="dineout-scroll" id="dineoutScroll">
+    <div class="dineout-card" data-name="The Living Room Signature">
+        <div class="dineout-img">
+            <img src="https://picsum.photos/seed/livingroomsignature/320/160" alt="The Living Room Signature">
+            <span class="dineout-rating">★ 4.7</span>
+        </div>
+        <h3>The Living Room Signature</h3>
+        <p class="dineout-meta">Continental • Asian — ₹1500 for two</p>
+        <p class="dineout-loc">Adyar, Chennai • 13 km</p>
+        <button class="dineout-offer" data-message="✅ Table booked at The Living Room Signature! Flat 10% off applied.">Flat 10% off on pre-booking +3 more</button>
+    </div>
+    <div class="dineout-card" data-name="Rasoee Veg Restaurant">
+        <div class="dineout-img">
+            <img src="https://picsum.photos/seed/rasoeeveg/320/160" alt="Rasoee Veg Restaurant">
+            <span class="dineout-rating">★ 4.0</span>
+        </div>
+        <h3>Rasoee Veg Restaurant</h3>
+        <p class="dineout-meta">North Indian • Chinese — ₹400 for two</p>
+        <p class="dineout-loc">George Town, Chennai • 0.8 km</p>
+        <button class="dineout-offer" data-message="✅ Table booked at Rasoee Veg Restaurant! Up to 10% bank offer applied.">Up to 10% off with bank offers</button>
+    </div>
+    <div class="dineout-card" data-name="Dosa.In">
+        <div class="dineout-img">
+            <img src="https://picsum.photos/seed/dosain/320/160" alt="Dosa.In">
+            <span class="dineout-rating">★ 5.0</span>
+        </div>
+        <h3>Dosa.In</h3>
+        <p class="dineout-meta">South Indian • Beverages — ₹250 for two</p>
+        <p class="dineout-loc">George Town, Chennai • 0.9 km</p>
+        <button class="dineout-offer" data-message="✅ Table booked at Dosa.In! Flat 10% off applied.">Flat 10% off on pre-booking +2 more</button>
+    </div>
+</div>
+
+<!-- ===== App banner ===== -->
+<div class="app-banner">
+    <div class="app-banner-text">
+        <h2>Get the Swiggy App now!</h2>
+        <p>For best offers and discounts curated specially for you.</p>
+        <button class="app-banner-btn" id="bannerAppBtn">Get the App</button>
+    </div>
+    <img class="app-banner-img" src="https://picsum.photos/seed/swiggyappbanner/220/220" alt="Get the app">
+</div>
+
+<!-- ===== Cities ===== -->
+<div class="cities-section">
+    <h2>Cities with food delivery</h2>
+    <div class="cities-grid">
+        <div class="city-pill" data-city="Bangalore">Order food online in Bangalore</div>
+        <div class="city-pill" data-city="Mumbai">Order food online in Mumbai</div>
+        <div class="city-pill" data-city="Chennai">Order food online in Chennai</div>
+        <div class="city-pill" data-city="Pune">Order food online in Pune</div>
+        <div class="city-pill" data-city="Hyderabad">Order food online in Hyderabad</div>
+        <div class="city-pill" data-city="Kolkata">Order food online in Kolkata</div>
+        <div class="city-pill" data-city="Gurgaon">Order food online in Gurgaon</div>
+        <div class="city-pill" data-city="Delhi">Order food online in Delhi</div>
+    </div>
+</div>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+    <div class="footer-top">
+        <div>
+            <h2 class="footer-logo">Swiggy</h2>
+            <p>© 2026 Swiggy Clone Project</p>
+        </div>
+        <div>
+            <h4>Company</h4>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Team</a>
+        </div>
+        <div>
+            <h4>Contact us</h4>
+            <a href="#">Help &amp; Support</a>
+            <a href="#">Partner With Us</a>
+        </div>
+        <div>
+            <h4>Legal</h4>
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== Toast (for offer / button messages) ===== -->
+<div class="toast" id="toast"></div>
+
+<!-- ===== Sign In Modal ===== -->
+<div class="modal-overlay" id="loginModal">
+    <div class="modal-box">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <h2 class="modal-logo">🛵 Swiggy</h2>
+        <p class="modal-sub">India's #1 Food Delivery and Dining App</p>
+        <label class="modal-label">Enter your mobile number</label>
+        <div class="modal-input-group">
+            <span class="modal-prefix">+91</span>
+            <input type="tel" maxlength="10" placeholder="00000 00000" id="phoneInput">
+        </div>
+        <button class="modal-continue" id="continueBtn">Continue</button>
+        <p class="modal-terms">By continuing, you agree to our <a href="#">Terms of Service</a> &amp; <a href="#">Privacy Policy</a></p>
+    </div>
+</div>
+
+<!-- ===== Get the App Modal ===== -->
+<div class="modal-overlay" id="appModal">
+    <div class="modal-box">
+        <button class="modal-close" id="closeAppModal">&times;</button>
+        <h2 class="modal-logo">🛵 Swiggy</h2>
+        <p class="modal-sub">Scan the QR code to download the app</p>
+        <div class="qr-box">📱</div>
+        <p class="modal-terms">Available on Android &amp; iOS</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
